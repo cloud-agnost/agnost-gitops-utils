@@ -1,0 +1,36 @@
+{
+  "name": "agnost-gitops-utils",
+  "version": "1.0.0",
+  "description": "Agnost platform oAuth2 and SSL certificate helper utility endpoints",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development dotenv -e .env -- nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.4",
+    "config": "3.3.9",
+    "cors": "2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.2.0",
+    "helmet": "6.0.1",
+    "nocache": "3.0.4",
+    "passport": "^0.7.0",
+    "passport-bitbucket-oauth2": "^0.1.2",
+    "passport-github2": "^0.1.12",
+    "passport-gitlab2": "^5.0.0",
+    "qs": "^6.13.0",
+    "rate-limiter-flexible": "2.4.1",
+    "redis": "3.1.2",
+    "response-time": "2.3.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.4.0",
+    "eslint": "^9.4.0",
+    "globals": "^15.3.0",
+    "nodemon": "2.0.20"
+  }
+}

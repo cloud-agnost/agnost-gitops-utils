@@ -1,0 +1,13 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": 4000,
+    "timeout": 3600000
+  },
+  "rateLimiters": [
+    {
+      "rateLimitWindowSec": 10,
+      "rateLimitMaxHits": 300
+    }
+  ]
+}

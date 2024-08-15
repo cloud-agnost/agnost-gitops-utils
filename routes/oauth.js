@@ -9,7 +9,7 @@ import revokeAccessToken from "../handlers/revokeAccessToken.js";
 const router = express.Router({ mergeParams: true });
 
 /*
-@route      /provider/:providerType
+@route      /oauth/:providerType
 @method     GET
 @desc       Authenticates the user using the specified provider
 @access     public
@@ -23,7 +23,7 @@ router.get(
 );
 
 /*
-@route      /provider/:providerType/refresh
+@route      /oauth/:providerType/refresh
 @method     POST
 @desc       Refreshes the access token using the specified provider
 @access     public
@@ -31,7 +31,7 @@ router.get(
 router.post("/refresh", checkOAuthProvider, refreshAccessToken);
 
 /*
-@route      /provider/:providerType/revoke
+@route      /oauth/:providerType/revoke
 @method     POST
 @desc       Revokes the access token using the specified provider
 @access     public

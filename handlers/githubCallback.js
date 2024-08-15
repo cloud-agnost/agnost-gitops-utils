@@ -77,6 +77,8 @@ async function getAccessToken(code) {
 			},
 		});
 
+		console.log("Access token response:", response.data);
+
 		return response.data.access_token; // The response.data will contain the access_token
 	} catch (error) {
 		console.error("Failed to retrieve access token:", error);

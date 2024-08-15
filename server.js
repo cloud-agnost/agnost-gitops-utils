@@ -45,7 +45,7 @@ async function initExpress() {
 	app.use(responseTime(logRequest));
 	app.use("/", (await import("./routes/system.js")).default);
 	app.use("/domains/records", (await import("./routes/domains.js")).default);
-	app.use("/provicer", (await import("./routes/callbacks.js")).default);
+	app.use("/provider", (await import("./routes/callbacks.js")).default);
 	app.use(
 		"/provider/:providerType",
 		(await import("./routes/oauth.js")).default

@@ -11,7 +11,7 @@ const router = express.Router({ mergeParams: true });
 @desc       Callback for Bitbucket OAuth
 @access     public
 */
-router.get("/bitbucket/callback", githubCallback);
+router.get("/bitbucket/callback", bitbucketCallback);
 
 /*
 @route      /provider/gitlab/callback
@@ -27,6 +27,6 @@ router.get("/gitlab/callback", gitlabCallback);
 @desc       Callback for GitHub OAuth
 @access     public
 */
-router.get("/github/callback", bitbucketCallback);
+router.get("/github/callback", githubCallback);
 
 export default router;

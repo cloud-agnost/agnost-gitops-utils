@@ -26,7 +26,6 @@ if (process.env.NODE_ENV === "development") {
 })();
 
 async function initExpress() {
-	// Create express application
 	var app = express();
 	// Add rate limiter middlewares
 	let rateLimiters = config.get("rateLimiters");

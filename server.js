@@ -46,6 +46,7 @@ async function initExpress() {
 	app.use("/domains/records", (await import("./routes/domains.js")).default);
 	app.use("/provider", (await import("./routes/callbacks.js")).default);
 	app.use("/oauth/:providerType", (await import("./routes/oauth.js")).default);
+	app.use("/community", (await import("./routes/community.js")).default);
 
 	// Middleware to handle undefined paths or posts
 	app.use(handleUndefinedPaths);

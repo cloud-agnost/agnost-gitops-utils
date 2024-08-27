@@ -1,5 +1,6 @@
 import express from "express";
 import { WebClient } from "@slack/web-api";
+import checkContentType from "../middlewares/checkContentType.js";
 
 const router = express.Router({ mergeParams: true });
 
@@ -18,7 +19,7 @@ const sendMessageToSlackChannel = async (param) => {
 @desc       Reports a bug
 @access     public
 */
-router.post("/bug", async (req, res) => {
+router.post("/bug", checkContentType, async (req, res) => {
 	try {
 		const { username, email, description, stack } = req.body;
 		sendMessageToSlackChannel({
@@ -39,7 +40,7 @@ router.post("/bug", async (req, res) => {
 @desc       Reports a feedback
 @access     public
 */
-router.post("/feedback", async (req, res) => {
+router.post("/feedback", checkContentType, async (req, res) => {
 	try {
 		const { username, email, feedback } = req.body;
 		sendMessageToSlackChannel({

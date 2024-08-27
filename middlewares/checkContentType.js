@@ -2,7 +2,7 @@ import config from "config";
 import express from "express";
 
 // Middleware to parse requext body and check content type
-export default checkContentType = (req, res, next) => {
+const checkContentType = (req, res, next) => {
 	// Check content type
 	if (req.get("Content-Type") !== "application/json") {
 		return res.status(415).json({
@@ -31,3 +31,5 @@ export default checkContentType = (req, res, next) => {
 		}
 	);
 };
+
+export default checkContentType;

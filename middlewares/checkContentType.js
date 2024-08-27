@@ -1,7 +1,7 @@
 import config from "config";
 import express from "express";
 
-// Middleware to handle undefined paths or posts
+// Middleware to parse requext body and check content type
 export default checkContentType = (req, res, next) => {
 	// Check content type
 	if (req.get("Content-Type") !== "application/json") {

@@ -9,7 +9,7 @@ const endpointHandler = async (req, res) => {
 		// First, find the record ID
 		const { body } = req;
 		const listResponse = await axios.get(
-			`${BASE_URL}?type=TXT&name=acme-${body.slug}.agnost.dev&content=${body.value}`,
+			`${BASE_URL}?type=TXT&name=acme-${body.slug}.agnost.dev&content="${body.value}"`,
 			{
 				headers: {
 					Authorization: `Bearer ${CLOUDFLARE_API_TOKEN}`,

@@ -9,7 +9,7 @@ const endpointHandler = async (req, res) => {
 		const { body } = req;
 		// Check to see if there is already a record
 		const listResponse = await axios.get(
-			`${BASE_URL}?type=TXT&name=acme-${body.slug}.agnost.dev&content=${body.value}`,
+			`${BASE_URL}?type=TXT&name=acme-${body.slug}.agnost.dev&content="${body.value}"`,
 			{
 				headers: {
 					Authorization: `Bearer ${CLOUDFLARE_API_TOKEN}`,
